@@ -49,7 +49,7 @@
             </tr>
             <c:forEach items="${deps}" var="d">
                 <tr>
-                    <td><input type="radio" name="departmentId" value="${d.id}"></td>
+                    <td><input type="radio" name="departmentId" value="${d.id}" checked="${work.departmentId}"></td>
                     <td>${d.name}</td>
                     <td>${d.address}</td>
                 </tr>

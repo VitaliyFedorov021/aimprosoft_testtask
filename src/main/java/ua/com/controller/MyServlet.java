@@ -52,7 +52,7 @@ public class MyServlet extends HttpServlet {
         Integer id = Integer.parseInt(req.getParameter("workerId"));
         String login = workerService.selectWorkerById(id).getLogin();
         workerService.deleteWorker(id);
-        resp.sendRedirect("successDelete.jsp");
+        req.getRequestDispatcher("successDelete.jsp").forward(req, resp);
     }
 
     @Override
